@@ -58,19 +58,6 @@ services:
             - TZ=Asia/Karachi
             - VERSION=latest
 
-    serviio:
-        image: lsiocommunity/serviio
-        container_name: serviio
-        restart: always
-        network_mode: "host"
-        volumes:
-            - $HOME/.config/serviio:/config
-            - /mnt/Seagate-1/media:/media
-            - /etc/localtime:/etc/localtime:ro
-        environment:
-            - PGID=1001
-            - PUID=1001
-
     transmission:
         image: linuxserver/transmission
         container_name: transmission
