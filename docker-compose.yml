@@ -72,4 +72,17 @@ services:
             - PGID=1001
             - PUID=1001
             - TZ=Asia/Karachi
-
+    
+    tautulli:
+        image: tautulli/tautulli
+        container_name: tautulli
+        restart: always
+        ports:
+            - 8181:8181
+        volumes:
+            - $HOME/.config/tautulli:/config
+            - $HOME/.config/plex/Library/Application Support/Plex Media Server/Logs:/plex_logs:ro
+        environment:
+            - PGID=1001
+            - PUID=1001
+            - TZ=Asia/Karachi
