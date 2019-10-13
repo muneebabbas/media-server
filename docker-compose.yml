@@ -27,6 +27,7 @@ services:
             - $HOME/.config/radarr:/config
             - /mnt/WD-1/downloads:/downloads
             - /mnt/Seagate-1/media/movies:/movies
+            - /mnt/Seagate-1/media/anime_movies:/anime_movies
         environment:
             - PGID=1001
             - PUID=1001
